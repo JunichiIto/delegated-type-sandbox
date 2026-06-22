@@ -1,10 +1,10 @@
 <% content_for :title, "製品一覧" %>
 
 <div class="mx-auto max-w-3xl px-4 py-8">
-  <h1 class="mb-6 text-2xl font-bold text-gray-900">給湯器 製品一覧</h1>
+  <h1 class="mb-6 text-center text-2xl font-bold text-gray-900">給湯器 製品一覧</h1>
 
   <%# render @products で products/_product.html.erb が各行に描画される %>
-  <ul class="space-y-4">
+  <ul class="grid grid-cols-2 gap-4">
     <%= render @products %>
   </ul>
 </div>
