@@ -1,0 +1,9 @@
+<%# 石油給湯器のスペック。oil_water_heater はローカル変数として渡ってくる。 %>
+<div>
+  <dt class="text-gray-500">対応燃料種</dt>
+  <dd class="font-medium text-gray-900"><%= t(oil_water_heater.fuel_type, scope: "activerecord.attributes.oil_water_heater.fuel_types") %></dd>
+</div>
+<div>
+  <dt class="text-gray-500">燃料消費</dt>
+  <dd class="font-medium text-gray-900"><%= oil_water_heater.fuel_consumption %>L/h</dd>
+</div>

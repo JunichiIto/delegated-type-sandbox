@@ -23,5 +23,8 @@ module DelegatedTypeSandbox
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # 日本語ロケールを既定にする（l ヘルパーの日付フォーマット等で使用）。
+    config.i18n.default_locale = :ja
   end
 end

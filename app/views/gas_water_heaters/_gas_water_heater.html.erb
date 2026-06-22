@@ -1,0 +1,9 @@
+<%# ガス給湯器のスペック。gas_water_heater はローカル変数として渡ってくる。 %>
+<div>
+  <dt class="text-gray-500">対応ガス種</dt>
+  <dd class="font-medium text-gray-900"><%= t(gas_water_heater.gas_type, scope: "activerecord.attributes.gas_water_heater.gas_types") %></dd>
+</div>
+<div>
+  <dt class="text-gray-500">ガス消費量</dt>
+  <dd class="font-medium text-gray-900"><%= gas_water_heater.gas_consumption %>kcal/h</dd>
+</div>

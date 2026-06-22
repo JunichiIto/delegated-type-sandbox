@@ -1,0 +1,22 @@
+ja:
+  date:
+    formats:
+      # l(date) の既定フォーマット（日本語の発売日表示で使用）
+      default: "%Y年%-m月%-d日"
+  activerecord:
+    models:
+      # Model.model_name.human で取得する給湯器の種別名
+      gas_water_heater: ガス給湯器
+      oil_water_heater: 石油給湯器
+      eco_cute: エコキュート
+    attributes:
+      gas_water_heater:
+        # gas_type enum の表示ラベル（t で引く）
+        gas_types:
+          city_gas: 都市ガス
+          propane: プロパン
+      oil_water_heater:
+        # fuel_type enum の表示ラベル（t で引く）
+        fuel_types:
+          kerosene: 灯油
+          heavy_oil: 重油

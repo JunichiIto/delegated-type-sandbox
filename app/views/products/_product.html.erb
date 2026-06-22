@@ -1,0 +1,22 @@
+<%# 製品1件の共通枠。種別固有のスペックは render product.heater に委譲する。 %>
+<li class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+  <div class="flex items-center justify-between gap-3">
+    <h2 class="text-lg font-semibold text-gray-900"><%= product.name %></h2>
+    <%# 種別名（"ガス給湯器" 等）は Rails 標準の model_name.human で取得する
+        （訳語は config/locales/ja.yml の activerecord.models）。 %>
+    <span class="shrink-0 rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+      <%= product.heater.model_name.human %>
+    </span>
+  </div>
+
+  <p class="mt-1 text-sm text-gray-500">
+    発売日: <%= l product.released_on %>
+  </p>
+
+  <%# to_partial_path の規約で、heater の実体に応じて
+      gas_water_heaters/_gas_water_heater・oil_water_heaters/_oil_water_heater・
+      eco_cutes/_eco_cute が自動的に選ばれる（delegated_type の利点）。 %>
+  <dl class="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+    <%= render product.heater %>
+  </dl>
+</li>

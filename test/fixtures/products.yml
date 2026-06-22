@@ -1,0 +1,15 @@
+# 委譲（polymorphic）の関連は `heater: 名前 (型)` の記法で指定する。
+gas_product:
+  name: GX-24
+  released_on: 2024-04-01
+  heater: gx (GasWaterHeater)
+
+oil_product:
+  name: OL-46
+  released_on: 2023-09-15
+  heater: ol (OilWaterHeater)
+
+ecocute_product:
+  name: EQ-370
+  released_on: 2025-01-20
+  heater: eq (EcoCute)
