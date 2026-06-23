@@ -2,6 +2,10 @@
 
 Rails の `delegated_type` を学ぶための練習用アプリ。「給湯器の製品カタログ」を題材に、共通データを持つ親モデルと、種別ごとに固有データを持つ子モデルを `delegated_type` で結びつける構成を示します。
 
+このサンプルアプリは以下の解説記事で使用されています。
+
+[【Rails】給湯器のサンプルアプリで学ぶDelegatedType \#Ruby \- Qiita](https://qiita.com/jnchito/items/180292de6cbb83a9672b)
+
 ## 題材とモデル構成
 
 製品（`Product`）は共通項目（製品名・発売日）だけを持ち、種別固有のスペックは `delegated_type :heater` で各給湯器モデルに委譲します。
