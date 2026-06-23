@@ -1,6 +1,6 @@
 # delegated_type サンプル用のシードデータ。
 # 何度実行しても同じ結果になるよう、既存データを消してから作り直す。
-[Product, GasWaterHeater, OilWaterHeater, EcoCute].each(&:delete_all)
+[ Product, GasWaterHeater, OilWaterHeater, EcoCute ].each(&:delete_all)
 
 # name には型名を含めない（"ガス給湯器" 等の種別名はビューの type_label で付与する）。
 # heater: に各スペックの実体を渡すだけで、delegated_type が heater_type/heater_id を保存してくれる。
